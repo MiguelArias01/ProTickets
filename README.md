@@ -1,2 +1,0 @@
-# firstProject
-GA first project
