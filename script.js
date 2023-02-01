@@ -1,6 +1,22 @@
 let url = 'https://app.ticketmaster.com/discovery/v2/events?'
 let APIKey ='apikey=KvUvKsCiFH8SuDxoCtgOmokjYojZ6w36&locale'
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.getElementById('submit').addEventListener('click',(e) => {
   e.preventDefault()
   let searchinput = document.getElementById('searchinput').value
@@ -23,7 +39,8 @@ document.getElementById('submit').addEventListener('click',(e) => {
        break;
 
     default:
-      // code block
+        tempURL = `${url}${APIKey}=*`
+        getData(tempURL)
   }
 
 
