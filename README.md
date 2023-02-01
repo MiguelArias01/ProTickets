@@ -4,6 +4,7 @@ GA first project
 App title  --------------------There--------------------
 
 
+
  --------app description----
 The porpose of the app is to search for events within user criteria and give the user the ability to
 choose which ever event they would like.
@@ -15,10 +16,13 @@ The information that i plan to use, is getting the event zipcode, or city or loc
 depending on what the user chooses to do.
 
 ------API snippet -------
+<img width="1512" alt="Screenshot 2023-01-31 at 14 57 55" src="https://user-images.githubusercontent.com/79764475/215877048-3b2befcc-b795-4315-8c02-7246789c446c.png">
+
 
 -------wire frames------
-
+![wire](https://user-images.githubusercontent.com/79764475/215877902-3642d929-e8fd-4357-9dfe-2aec7d56ea2a.png)
 --------MVP-------
+
 the main features will be the search by differnt criteria and it will return that information.
 
 
@@ -40,4 +44,3 @@ feb 5------
  test for possible issues
 feb 6-----
 present the Idea
-
