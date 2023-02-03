@@ -1,9 +1,14 @@
-body {
+html {
   display: flex;
+}
+
+
+body {
+  
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   
   
 }
@@ -11,8 +16,19 @@ body {
   justify-content: center;  
 }
 
-.content {
-  margin-left: 50px;
+.container {
+
+ 
+
   
 }
-
+.cardImg {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 5px 5px 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 75px;
+  width: 50px;
+  border-radius: 10%;
+}
