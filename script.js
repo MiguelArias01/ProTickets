@@ -6,47 +6,115 @@ const select = document.getElementById('dropdown')
 function preventUserFromF(){
   select.addEventListener('change', () => { search.value = "" })
   search.addEventListener("keypress", (event) => {
-      if (select.value === 'postalCode') {
-        if (event.key.charCodeAt() < 48 || event.key.charCodeAt() > 57)
-          event.preventDefault()    
-      }
+    if (select.value === 'postalCode') {
+      if (event.key.charCodeAt() < 48 || event.key.charCodeAt() > 57)
+      event.preventDefault()    
+    }
+    
+  });}
   
-});}
-
-function userGetInfo(){
-  document.getElementById('submit').addEventListener('click',(e) => {
-    e.preventDefault()
+  
+  
+  
+  function userGetInfo(){
+    document.getElementById('submit').addEventListener('click',async (e) => {
+      e.preventDefault();
+    let tempURL = ''
     let searchinput = search.value
     let dropdown = select.value
-    let tempURL = ''
+   
+
 
     switch(dropdown) {
       case 'keyword':
          tempURL = `${url}${APIKey}=*&keyword=${searchinput}`
-        getData(tempURL)
         break;
       case 'postalCode':
           tempURL = `${url}${APIKey}=*&postalCode=${searchinput}`
-        getData(tempURL)
         break;
-      case 'city':
+       case 'city':
           tempURL = `${url}${APIKey}=*&city=${searchinput}`
-        getData(tempURL)
-
-        break;
-
+         break;
       default:
           tempURL = `${url}${APIKey}=*`
-          getData(tempURL)
-  }})}
+    }
+   
+      
+
+        async function getData(tempURL){
+          let res = await fetch(`${tempURL}`)
+          let json = await res.json()
+          return json._embedded.events
+        }
 
 
-async function getData(tempURL){
-  let res = await fetch(`${tempURL}`)
-  let json = await res.json()
-  console.log(json._embedded.events)
-}
 
 
-preventUserFromF()
+   async function renderList(){
+      data = await getData(tempURL)
+      console.log(data)
+      const container = document.getElementById('container')
+      container.innerHTML = ''
+      e.innerHTML = ''
+      for (let i = 0; i < data.length; i++) {
+        let cardImg = document.createElement('div')
+        let cardName = document.createElement('div')
+        let Image = data[i].images[0].url
+        cardImg.setAttribute('class', 'cardImg')
+        cardName.setAttribute('class', 'cardName')
+        cardImg.style.backgroundImage = `url('${Image}')`
+        cardName.innerText = data[i].name
+        cardImg.append(cardName)
+        container.append(cardImg)
+       
+        
+      }
+
+     }
+  
+
+
+
+
+
+     renderList()
+
+   
+
+  })}
 userGetInfo()
+  
+
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  preventUserFromF()
+ 
