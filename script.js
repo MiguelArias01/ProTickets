@@ -64,7 +64,7 @@ function preventUserFromF(){
         let cardcontainer = document.createElement('div')
         let cardImg = document.createElement('img')
         let cardName = document.createElement('div')
-        let Image = data[i].images[0].url
+        let Image = data[i].images[1].url
         cardcontainer.setAttribute('value', `${i}`)
         cardcontainer.setAttribute('id',`${i}`)
         cardImg.setAttribute('class', 'cardImg')
@@ -82,7 +82,7 @@ function preventUserFromF(){
       .forEach(el => {
         el.addEventListener('mouseover', e => {
           e.target.classList.add('active')
-          e.target
+         
         }
         )
           
@@ -101,7 +101,6 @@ function preventUserFromF(){
              let cardBtnValue = document.getElementById(`${eventNumber}`);
 
 
-             let span = document.getElementsByClassName("close")[0];
 
              cardBtnValue.addEventListener('click', function() {
               modal.style.display = "block";
@@ -127,7 +126,6 @@ function preventUserFromF(){
 
 
 
-// When the user clicks anywhere outside of the modal, close it
             window.addEventListener('click',function(event) {
               if (event.target == modal) {
                 modal.style.display = "none";
