@@ -47,7 +47,7 @@ function preventUserFromF(){
           let json = await res.json()
           return json._embedded.events}
           catch(err){
-            alert('Your search didn\'t return any results, please try again')
+            alert(`Your search didn\'t return any results, please try again`)
           }
         }
 
@@ -56,10 +56,10 @@ function preventUserFromF(){
 
    async function renderList(){
       data = await getData(tempURL)
-      console.log(data)
       const container = document.getElementById('container')
       container.innerHTML = ''
       e.innerHTML = ''
+      if (data){
       for (let i = 0; i < data.length; i++) {
         let cardcontainer = document.createElement('div')
         let cardImg = document.createElement('img')
@@ -76,7 +76,7 @@ function preventUserFromF(){
         container.append(cardcontainer)
         cardcontainer.append(cardName)
         cardcontainer.append(cardImg)  
-      }
+      }}
 
       document.querySelectorAll('.cardcontainer')
       .forEach(el => {
@@ -103,7 +103,7 @@ function preventUserFromF(){
 
              let span = document.getElementsByClassName("close")[0];
 
-             cardBtnValue.onclick = function() {
+             cardBtnValue.addEventListener('click', function() {
               modal.style.display = "block";
               const modelContent = document.querySelector('.modal-content')
               modelContent.removeChild
@@ -123,16 +123,16 @@ function preventUserFromF(){
                 
                 
               
-            }
+            })
 
 
 
 // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
+            window.addEventListener('click',function(event) {
               if (event.target == modal) {
                 modal.style.display = "none";
                }
-             }
+             })
 
 
 
