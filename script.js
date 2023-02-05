@@ -42,9 +42,13 @@ function preventUserFromF(){
       
 
         async function getData(tempURL){
+          try {
           let res = await fetch(`${tempURL}`)
           let json = await res.json()
-          return json._embedded.events
+          return json._embedded.events}
+          catch(err){
+            alert('Your search didn\'t return any results, please try again')
+          }
         }
 
 
@@ -111,12 +115,7 @@ function preventUserFromF(){
               eventLocDiv.innerText = `Venu: ${data[eventNumber]._embedded.venues[0].name}`
 
              
-               
-
-
-
-
-
+             
               modelContent.innerText = name
               modelContent.appendChild(div)
               modelContent.appendChild(eventLocDiv)
