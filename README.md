@@ -1,4 +1,4 @@
-# firstProject
+# ProTickets
 GA first project
 
 App title  --------------------ProTickets--------------------
