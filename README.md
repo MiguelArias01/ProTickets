@@ -44,3 +44,6 @@ feb 5------
  test for possible issues
 feb 6-----
 present the Idea
+______Priority Matrix____
+
+<img src="https://res.cloudinary.com/dkrb38n6n/image/upload/v1675647320/Screenshot_2023-02-05_at_20.34.34_hrvlsx.png">
