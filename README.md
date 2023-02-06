@@ -19,7 +19,7 @@ depending on what the user chooses to do.
 <img width="1512" alt="Screenshot 2023-01-31 at 14 57 55" src="https://user-images.githubusercontent.com/79764475/215877048-3b2befcc-b795-4315-8c02-7246789c446c.png">
 
 let tempURL = 'https://app.ticketmaster.com/discovery/v2/events?'
-
+```
 async function getData(tempURL){
           try {
           let res = await fetch(`${tempURL}`)
@@ -31,7 +31,7 @@ async function getData(tempURL){
         }
 
 getData(tempURL);
-
+```
 
 
 -------wire frames------
