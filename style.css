@@ -158,3 +158,21 @@ active:hover {
   text-decoration: none;
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+   h1 {
+    font-size: 250%;
+   }
+   nav {
+    display: inline-flex
+    
+   }
+
+   form {
+    flex-direction: column;
+    justify-content: center;
+   }
+
+
+
+}

@@ -6,16 +6,23 @@ App title  --------------------ProTickets--------------------
 
 
  --------app description----
+
+
 The porpose of the app is to search for events within user criteria and give the user the ability to
 choose which ever event they would like.
 
 
 -------API-------
+
+
+
 I am using the ticket master API which allows for 5000 calls per day.
 The information that i plan to use, is getting the event zipcode, or city or location or other
 depending on what the user chooses to do.
 
-------API snippet -------
+                                                           ------API snippet -------
+
+
 <img width="1512" alt="Screenshot 2023-01-31 at 14 57 55" src="https://user-images.githubusercontent.com/79764475/215877048-3b2befcc-b795-4315-8c02-7246789c446c.png">
 
 let tempURL = 'https://app.ticketmaster.com/discovery/v2/events?'
@@ -42,7 +49,7 @@ the main features will be the search by differnt criteria and it will return tha
 
 
 ----post MVP----
-add a clickable interface to all the cards so the user can be directed to the site where they can purchase tickets to their choosen event
+add a clickable interface to all the cards so the user can get more information.
 
 ---------goals--------
 jan 31---
