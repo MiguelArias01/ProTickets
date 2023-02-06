@@ -47,7 +47,7 @@ function preventUserFromF(){
           let json = await res.json()
           return json._embedded.events}
           catch(err){
-            alert(`Your search didn\'t return any results, please try again`)
+            alert(`Your search didn\'t return any results, try to search for an event`)
           }
         }
 
@@ -123,46 +123,11 @@ function preventUserFromF(){
                 
               
             })
-
-
-
             window.addEventListener('click',function(event) {
               if (event.target == modal) {
                 modal.style.display = "none";
                }
              })
-
-
-
-
-
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         })
          
@@ -170,49 +135,12 @@ function preventUserFromF(){
       )
     }
   
-
-
-
-
-
      renderList()
 
    
 
   })}
 userGetInfo()
-  
-
-  
-  
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  preventUserFromF()
+    
+preventUserFromF()
  

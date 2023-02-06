@@ -18,6 +18,21 @@ depending on what the user chooses to do.
 ------API snippet -------
 <img width="1512" alt="Screenshot 2023-01-31 at 14 57 55" src="https://user-images.githubusercontent.com/79764475/215877048-3b2befcc-b795-4315-8c02-7246789c446c.png">
 
+let tempURL = 'https://app.ticketmaster.com/discovery/v2/events?'
+
+async function getData(tempURL){
+          try {
+          let res = await fetch(`${tempURL}`)
+          let json = await res.json()
+          return json._embedded.events}
+          catch(err){
+            alert(`Your search didn\'t return any results, try to search for an event`)
+          }
+        }
+
+getData(tempURL);
+
+
 
 -------wire frames------
 ![wire](https://user-images.githubusercontent.com/79764475/215877902-3642d929-e8fd-4357-9dfe-2aec7d56ea2a.png)
